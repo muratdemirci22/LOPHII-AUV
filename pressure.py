@@ -24,7 +24,7 @@ def request_message_interval(message_id: int, frequency_hz: float):
         0, # Target address of message stream (if message has target address fields). 0: Flight-stack default (recommended), 1: address of requestor, 2: broadcast.
     )
 
-# Configure ATTITUDE message to be sent at 2Hz
+# Configure SCALED_PRESSURE message to be sent at 2Hz
 request_message_interval(mavutil.mavlink.MAVLINK_MSG_ID_SCALED_PRESSURE, 2)
 
 def get_pressure_data():
